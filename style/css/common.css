@@ -1,0 +1,129 @@
+body, header, nav, main, footer, section, article, aside, form, input, textarea, fieldset, legend, div, figure, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, video, audio, iframe, a, p, input, button, pre, hr, user-info, profile-banner, notification-bar, html5-player{margin:0;padding:0;border:0;box-sizing:border-box;}
+:root{--color-high:#dea037;--color-low:#9370db;}
+html{height:100%;}
+body{position:relative;min-height:100%;background-color:#130e14;color:#fff;font:400 14px "Muli", sans-serif,Arial;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;image-rendering:-webkit-optimize-contrast;-webkit-backface-visibility:hidden;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+main{display:block;padding-bottom:416px;overflow-x:hidden;}
+@media only screen and (max-width:900px){main{padding-bottom:456px;}html>body:not(.user-profile)>header{height:321px;border-bottom:0;}}
+@media only screen and (max-width:561px){main{padding-bottom:682px;}
+                                         body:not(.user-profile)>header{height:185px!important;border-bottom:0!important;}}
+textarea{resize:none;}
+ul, ol, dl{list-style:none;}
+button:focus, input:focus, summary:focus, textarea:focus{outline:0;}
+body:not(.user-profile)>header{display:flex;position:relative;height:357px; padding: 25px 0 36px;     background: linear-gradient(to bottom, hsla(240, 8%, 15%,1), hsla(240, 8%,9%,1));
+                               box-shadow: inset 0 1px 0 hsla(255,255%,255%,0.05), inset 0 0 1px hsla(255,255%,255%,0.1), 0 4px 6px hsla(0,0%,0%,0.85), 0 1px 2px hsla(0,0%,0%,0.9);overflow: hidden;}
+body:not(.user-profile)>header>a{margin:auto;min-height:170px;max-width:850px;background:url(//dashmash.ddns.net/assets/img/logo/logo_newer.png) center no-repeat;background-size:contain;transition:background-image .2s ease-in-out;text-indent:-9999em;flex:1;filter: drop-shadow(5px 5px 0px rgba(255, 255, 255, 0.8));}
+body>header:not(.user-profile)>a:hover{background:url("//dashmash.ddns.net/assets/img/logo/logo_newer_hover.png") center no-repeat;background-size:contain;}
+main>header{position:relative;background-color: rgba(0, 0, 0, 0.65);width:100%;overflow-y:hidden;}
+main>header>div{display:flex;flex-wrap:wrap;justify-content:space-between;max-width:900px!important;}
+main>header>div>div{width:50%;}
+main>header>div>div, main>header>div>section{display:inline-block;vertical-align:top;}
+main>footer{width:100%;background:url("//dashmash.ddns.net/assets/img/bg/breaker.jpg") top center no-repeat;background-size:cover;}
+main>footer>div{text-align:right;padding:20px;max-width:900px!important;margin:auto;}
+#auto-up{position:fixed;z-index:100;right:10px;bottom:-30px;line-height:27px!important;padding:0 8px;color:#fff;background-color:rgba(0, 0, 0, 0.43);border-radius:100%;transition:.2s ease;transition-property:bottom, background-color;}
+#auto-up.show{bottom:10px;}
+#auto-up:hover{background-color:rgba(244, 67, 54, .5);}
+#auto-up::before{content:"\f106";}
+body>footer{position:absolute;left:0;right:0;bottom:0;padding:30px 0 20px 0;background:url("//dashmash.ddns.net/assets/img/bg/wall_footer.jpg");background-size:cover;}
+body>footer ul{margin-top:5px;}
+body>footer ul>li{margin-bottom:2px;background:rgba(0,0,0,0.3);font:600 1em/1.35em "Arial";}
+body>footer li>a{display:block;text-indent:2px;font-style:italic;padding:6px;}
+body>footer li span{display:block;position:relative;height:0;top:-17px;transition:.2s ease-out;opacity:0;font-size:11px;font-style:italic;text-transform:uppercase;text-align:center;border:solid var(--color-high);border-width:0 2px;background:repeating-linear-gradient(135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 10px, rgba(75, 75, 75, .05) 10px, rgba(75, 75, 75, .05) 20px);}
+body>footer section:last-of-type li span{border-color:var(--color-low)}
+body>footer li:hover a{color:#fff!important;}
+body>footer li:hover span{opacity:1;height:17px;top:0;}
+body>footer li:hover a::before{color:#fff!important;}
+body>footer>div{display:flex;flex-wrap:wrap;justify-content:center;padding:0 8px 8px;background:rgba(0,0,0,0.25);}
+body>footer>div>*:not(:last-child){padding:7px 15px 0;}
+body>footer>div>*:nth-child(3) ul>li>a::before, .user-social *::before{    color: #999;margin-right: 7px;position: relative;display: inline-block;width: 21px;top: 2px;}
+body>footer>div>img{flex:1;    max-height: 301px;margin-top:12px;}
+body>footer>div>*:nth-child(2), body>footer>div>*:nth-child(3){flex:.5;height:320px;}
+body>footer>div>*:last-child{width:100%;font-family:Arial;color:#808080;margin-top:8px;font-size:14px;font-size:.9em;line-height:1.5em;display:flex;justify-content:space-between;}
+body>footer>div>*:last-child p:last-of-type{display:inline-flex;justify-content:space-evenly;}
+body>footer>div>*:last-child mark{background:none;color:#9370db;}
+body>footer>div>*:last-child strong{color:#a0a0a0;}
+body>footer>div>*:last-child>p{border:solid 1px #3a3a3a;padding:5px 15px;width:49.5%;text-align:center;font-size:12px;overflow:hidden;}
+body>footer>div>*:last-child>p>*{display:inline-block;}
+.stripes{background:repeating-linear-gradient(135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 10px, rgba(75, 75, 75, .05) 10px, rgba(75, 75, 75, .05) 20px);background-color:rgba(255,255,255,.02);}
+@media only screen and (max-width:900px){
+    body>footer>div>section{width:267px;flex:auto!important;}
+    body>footer>div>section:last-of-type{height:226px;}
+    body>footer>div>*:last-child, body>footer>div>*:last-child p{width:100%!important;display:block!important;}
+    body>footer>div>img{display:none;}
+    body>footer>div>*:last-child>p:last-of-type{margin-top:10px;display:flex!important;}
+}
+a{text-decoration:none;}
+p{-webkit-font-smoothing:subpixel-antialiased;}
+
+h1, h2, h3, h4, h5, .play dt{font:700 24px "Jura", "Squada One","Unica One",sans-serif;padding:2px;text-indent:8px;white-space:nowrap;background:-webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+h2, main>header>h1{max-width:900px;margin:auto;position:relative;overflow:hidden;padding:20px 0;}
+h5{padding:8px; font-family: "Squada One", Arial;font-weight: 400; text-transform: uppercase}
+main>header>h1{text-align:center;}
+.forum h2::before, section:not(.news) h3::before, .ldrboards h3::before, .about h3::before, .play h3::before, .play dt::before, .ldrboards h4::before, .report-user h4::before, .subsection h4::before, .error h1::before, .user-menu>header>h4::before, .notifications>header>h4::before{content:"";position:relative;display:inline-block;margin:0 10px 0 0;width:30px;height:30px;vertical-align:middle;}
+h5::after, a.exit::before, .user-profile .editor>div input[type="radio"]{font-size:18px;line-height:26px;font-family:"FontAwesomeS";}
+h5::after{color:#777;float:right;}
+.login form button, section>footer button, section>form>button, input[type='checkbox'], nav>div>ul:last-of-type>li>a{font-size:17px;}
+h6, dialog span, dialog a, input[type="text"], input[type="number"], input[type="password"],#login-form fieldset label, input[type="checkbox"]::after{font-size:12px;font-weight:400;}
+a, #button-login, .fat:first-of-type, community figure span>strong, aside p strong:nth-of-type(1), .news article header span{color:var(--color-high);}
+a:hover, .fat:hover, input[type="checkbox"]::after, body>footer div a:hover::before, .news span strong, dialog span, a.exit:hover{color:#FFF!important;}
+.fat:last-of-type:not(:only-of-type), li:nth-of-type(4) .fat, body>footer>div>section:last-of-type a{color:var(--color-low);}
+.home-link,.news a span{color:#E73A61;}
+nav ul a, .forum thead th, #login-form input[type="text"]::placeholder, input[type="password"]::placeholder, #login-form label, nav ul:not(:first-of-type) a, .play>a:first-of-type>strong, .download caption, .news a span, .news a strong, .news article header strong, .news article>header>span, form>div>p>label, header>div>button{font-family:"Visitor", sans-serif;font-weight:400;}
+.user-level, #bell::before, control-strip button::before, .alert-message span::before, .play section:last-of-type button::before, .home-link, #auto-up, body:not(.user-profile) section>footer a::after, .about article:last-of-type ul li a::after, .user-menu>ul a::after{font:400 17px/0 "FontAwesomeS";}
+chat-window footer button::after, .user-social li a::before, .user-social li span::before, body>footer>div>section:nth-of-type(2)>ul>li>a::before{font:400 17px/0 "FontAwesomeB";}
+.forum table:first-of-type tbody td:not(:first-of-type) a:hover, .forum_feature section:last-of-type table a:hover{text-decoration:underline;color:#dea037!important;}
+a.fat, .link-row a, .link-row b{margin:0 3px;padding:0 6px;position:relative;display:inline-block;font-size:.9em;line-height:2.1em;font-weight:600;white-space:nowrap;}
+::selection{color:#f66;background-color:#e73a61;}
+::-webkit-scrollbar{width:12px;height:12px;}
+::-webkit-scrollbar-thumb{background-color:#414248;}
+::-webkit-scrollbar-track{background-color:#212226;}
+::-webkit-media-controls-panel{background:rgba(0,0,0,0.75);}
+::-webkit-media-controls-fullscreen-button{display:none;}
+.yt-player, html5-player video{max-width:534px;width:100%;height:300px;}
+html5-player video{max-height: 400px; height:100%;}
+control-range, range-fill{height:15px;background-color:rgba(247, 206, 59, 0.5);outline:0;position:relative;cursor:pointer;}
+range-fill{display:block;background-color:#ffcc36;width:0;box-shadow:0px 0px 5px 1px rgba(255, 189, 40, 0.3);}
+control-thumb{background-color:rgba(255,255,255,0.2);width:4px;height:15px;}
+control-range:first-of-type{width:55%;}
+control-strip{display:flex;align-items:center;justify-content:space-around;position:relative;height:35px;bottom:0;opacity:0;max-width:470px;margin:auto;transition:opacity .5s ease;background:rgba(0, 0, 0, 0.85);border:solid thin rgba(0, 0, 0, 0.7);border-radius:6px;box-shadow:inset 0 0 1px rgba(255, 255, 255, 0.5);}
+html5-player.video control-strip{bottom:51px;}
+html5-player.video:hover control-strip{opacity:1;}
+html5-player.audio control-strip{opacity:1;}
+control-strip button{color:#dea703;cursor:pointer;height:inherit;line-height:35px;background:none;transition:.2s ease;transition-property:color, text-shadow;}
+control-strip button:hover{color:#FFEB3B;text-shadow:0px 0px 6px rgba(255, 231, 162, 0.6);}
+control-strip button::before{top:2px;position:relative;}
+control-strip button:first-of-type{width:50px;}
+control-strip button:nth-of-type(2){width:30px;}
+control-strip button:first-of-type::before{content:"\f04b";font-size:17px;}
+control-strip button:first-of-type.toggled::before{content:"\f04c";}
+control-strip button:nth-of-type(2)::before{content:"\f027";font-size:20px;}
+control-strip button:nth-of-type(2).high::before{content:"\f028";}
+control-strip button:nth-of-type(2).low::before{content:"\f027";}
+control-strip button:nth-of-type(2).off::before{content:"\f026";}
+player-time{display:flex;justify-content:space-between;flex-wrap:wrap;width:75px;user-select:none;}
+player-time time{display:inline-block;font-size:14px;color:#fff;user-select:none;}
+player-time time:last-of-type{color:#ffcc36;}
+.error>div{text-align:center;padding:200px;background:#000;}
+.error h1{width:100%;font-size:4.4em;text-indent:0;padding:0;margin-bottom:20px;}
+.error p{font-size:2em;}
+.account_msg{top:50px;bottom:auto;color:var(--color-high);}
+body>footer>div>section:last-of-type ul>li:nth-of-type(1)>a::before, .user-discord span::before{content:"\f392";}
+body>footer>div>section:last-of-type ul>li:nth-of-type(2)>a::before, .user-youtube a::before{content:"\f167";}
+body>footer>div>section:last-of-type ul>li:nth-of-type(3)>a::before, .user-twitter a::before{content:"\f099";}
+body>footer>div>section:last-of-type ul>li:nth-of-type(4)>a::before, .user-twitch a::before{content:"\f1e8";}
+body>footer>div>section:last-of-type ul>li:nth-of-type(5)>a::before, .user-steam a::before{content:"\f1b7"}
+body>footer>div>*:nth-child(2)>h5::after{content:"\f0c1";}
+body>footer>div>*:nth-child(3)>h5::after, .about article:last-of-type ul li a::after{content:"\f35d";}
+.user-level::before{color:#dea037;margin:5px;position:relative;top:1px;}
+.user-level.one::before{content:"\f005";}
+body:not(.user-profile) .discord>footer a::after{content:"\f35d";}
+
+.user-online{
+    position: relative;
+    top: 22px; left: -8px; 
+    z-index: 3;
+    width: 13px; height: 13px;
+    border-radius: 50%;
+}
+
+textarea{border: 1px solid #392e5c;    box-shadow: 0px 1px 10px 0 rgba( 91, 132, 181, 0.2 );background: #0e0c13;color: #faf9fa;transition: box-shadow .12s ease-in,border .12s ease-in;}
+textarea:focus{border-color: #7d5bbe;box-shadow: 0 0 6px -2px #7d5bbe;}

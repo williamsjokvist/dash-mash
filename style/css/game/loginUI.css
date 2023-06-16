@@ -1,0 +1,147 @@
+*{border:0; margin:0; border:0;} 
+
+main{
+    /*Container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main>img{
+    /*Logo*/
+    width:350px;
+
+}
+header>img{width:50px; height:50px; margin:10px;} /*Header logo*/
+
+/* //////////////////////////////////////// FORM STRUCTURE ////////////////////////////*/
+
+form{width:445px; background: linear-gradient(to bottom,rgba(0, 0, 0, 0.84),#040b25);border-radius:12px;    margin-left: 20px; padding:5px;     border: solid thin rgba(255, 255, 255, .4);     white-space: nowrap;    box-shadow: 3px 2px 10px 0px rgba(0,0,0,0.75);} /*Container*/
+
+header{
+    /*Header*/
+    text-indent: 15px;
+    /*background: repeating-linear-gradient( 135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 10px, rgba(75, 75, 75, .05) 10px, rgba(75, 75, 75, .05) 20px );
+    background-color: #030a22;
+    box-shadow: inset 0px 4px 17px 1px rgba(0,0,0,0.75);*/
+    border-radius:7px;
+    display:flex;
+}
+
+footer{
+    text-align:right;
+
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    /*box-shadow: inset 3px 3px 7px -2px rgb(43, 2, 89);
+    background-color: #9300ff;*/
+}
+
+fieldset, footer{  padding: 10px;}
+fieldset:first-of-type{padding-left:100px;}
+
+/* ///////////////////////////////// FORM TEXT /////////////////////////*/
+
+h4{display:inline-block;    margin: .8em 0;     font: 400 24px "Squada One","Unica One",sans-serif; text-transform: uppercase; flex:1;} /*Title*/
+
+h4::before{
+    /*Title icon*/
+    content: "";
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background: url("//dashmash.ddns.net/assets/img/icons/binoculars.svg");
+}
+
+input, label{line-height: 30px; font-size: 16px;}
+label{
+    margin-left: -85px;
+    float: left;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+label, a{
+    font-family:"Visitor", sans-serif;
+}
+
+/* ///////////////////////////////// FORM INPUTS  /////////////////////////*/
+
+input{
+
+    /*Username, password inputs*/
+    text-indent: 7px;
+    box-shadow: inset 3px 3px 7px -2px rgba(0,0,0,0.75);
+    border: 1px solid #121212;
+    display: block;
+    width: 210px;
+    margin-bottom:8px;
+    border-radius: 6px;
+
+}
+
+*:focus{outline:transparent;}
+
+input:-webkit-autofill {
+    /*Autofill style*/
+    -webkit-box-shadow: 0 0 0px 1000px #f69902 inset;
+    color: #fff;
+}
+
+a{    
+    /*External links*/
+    display:inline-block;
+    background: rgba(0,0,0,0.5);
+    padding: 4px 8px;
+    margin: 0 10px;
+    text-decoration:none;
+    color: #f90;
+    transition: .1s ease;
+}
+
+a:first-of-type{margin-left:0;}
+a:hover{color:#fff;}
+
+button{
+    /*Login Button*/
+    position: absolute;
+    margin-left: 224px;
+    font-size: 23px;
+    padding: 23px;
+    line-height: 30px;
+    color: #ffffff;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.55);
+    color:#f90;
+    cursor:pointer;
+    width:102.28px;
+    font-family: "Exo", sans-serif;
+    transition: .1s ease;
+}
+button:hover{
+    color: #fff;
+}
+
+button:active, a:active {
+    transform: translate(0,1px);
+}
+
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    background: url("//dashmash.ddns.net/aassets/img/bg/wall_logo_rad_4.jpg") no-repeat;
+    background-size: cover; 
+}

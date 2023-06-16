@@ -1,0 +1,9 @@
+https://dashmash.ddns.net/
+https://dashmash.ddns.net/?action=play
+https://dashmash.ddns.net/?action=leaderboards
+https://dashmash.ddns.net/?action=about
+https://dashmash.ddns.net/?action=terms
+https://dashmash.ddns.net/forum.php
+https://dashmash.ddns.net/forum/board.php
+https://dashmash.ddns.net/forum/topic.php
+https://dashmash.ddns.net/profile.php

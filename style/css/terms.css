@@ -1,0 +1,23 @@
+.terms{background: repeating-linear-gradient(135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 10px, rgba(75, 75, 75, .05) 10px, rgba(75, 75, 75, .05) 20px);background-color: #18181d;}
+.terms>header>p{margin: 30px auto; max-width: 900px;}/*Acceptance*/
+.terms>header>p>strong{display: block;text-align: center;margin-top: 20px;}
+.terms>*:not(footer){margin: 20px auto;max-width: 1200px;box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.47);background: rgba(242, 242, 242, 0.95);color:#000;}    /*Header & Section*/
+.terms>header{padding:10px 40px;}/*Header*/
+.terms>section>div{margin: 0 15px!important;} /*Cols*/
+.terms h1, .terms h2{font-family: "Exo", Arial, sans-serif;-webkit-text-fill-color: #000;text-transform: capitalize;text-indent:0;font-weight:100;}
+.terms h1::before, .terms h1::after, .terms h2::after{background: rgba(0, 0, 0, 0.3)!important;}
+.terms section>section p{margin-bottom:10px;}/*Term description*/
+.terms section>div>ul{list-style: square; padding: 10px 40px;} section>div>ul>li{padding-bottom:5px;}/*Term list*/
+.terms section>div:last-of-type>p:last-of-type{margin: 20px 0;padding: 20px;border-top: 1px solid #a9a9a9;} /*Contact*/
+.terms section>div:last-of-type>p:last-of-type em{display:block;margin-top:7px;} /*Terms info*/
+
+@media only screen and (min-width: 900px){
+    .terms>section{display: flex; flex-wrap: wrap;padding: 10px 40px 40px;}
+    .terms>section>div{flex:.5;  }/*Cols*/
+}
+
+@media only screen and (max-width: 900px){
+    .terms>section{padding:0;}/*Section*/
+    .terms>section>div{max-width:100%;}/*Cols*/
+    .terms h2{text-align:center;}
+}

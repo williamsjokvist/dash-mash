@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /dump/
+Disallow: /assets/
+Allow: /index
+Allow: /forum
+Allow: /board
+Allow: /topic
+Allow: /leaderboards
+Allow: /profile

@@ -1,0 +1,418 @@
+section .stripes{    max-width: 878px; height: 40px; background-color: #191224;}
+
+/* ///////////////////////////////////// HEADER /////////////////////////////////////// */
+
+body>header{
+    position:relative;
+    height: 350px;
+}
+
+profile-bar{
+    /*Header bar wrapper*/
+    position:absolute; z-index:3000;
+    bottom:0;
+    width:100%;
+    height:60px;
+    background: rgba(0, 0, 0, 0.75); 
+    border-bottom: 2px solid #000;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+profile-bar>div, user-info{
+    /*Header container*/
+    display:flex;
+    margin:auto!important;
+    height:inherit;
+    max-width:900px;
+}
+
+profile-bar>div>div{
+    display:flex;
+    align-items: center;
+    height:inherit;
+}
+
+profile-bar>div>div:first-of-type{flex:1;}
+profile-bar>div>div:first-of-type>a,profile-bar>div>div:first-of-type>span, .comments article>header a:first-of-type>div>span{background-color: rgba(0, 0, 0, 0.54);padding: 4px 8px;border-radius: 5px;}
+profile-bar>div>div:last-of-type{padding: 0 20px;}
+profile-bar>div>div:first-of-type>a{transition: margin-left .5s ease;}
+/*mobile style*/
+@media screen and (max-width: 450px){
+    div>.avatar-container{position:absolute;top: -130px;}
+    profile-bar>div>div:first-of-type>a{margin-left:20px;}
+    user-info>ul{width:100%;}
+    profile-bar user-info[mode="open"]{height:310px;padding:20px;}
+    body header #save{display:none;margin-bottom:3px;}
+    body.edit #save{display:inline-block;}
+
+    html>.user-profile>main>section{    background-size: cover!important;background-attachment: fixed!important;}
+}
+
+
+/*/////////////////////////////////////////// UPLOAD INPUTS /////////////////////////////////////////////////////////*/
+profile-banner, profile-banner>*{
+    /*Banner container*/
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    width: 100%;     height: 370px;
+    overflow: hidden;
+}
+
+.avatar-container{
+    position: relative;
+    overflow: hidden;
+    border: 3px solid rgba(105, 105, 105, 0.13);
+    outline: 2px solid rgba(255, 255, 255, 0.27);
+    margin: 0 24px;    z-index: 2;
+    top: -10px;
+    transition: top .2s ease;
+
+}
+
+.avatar-container, .avatar-container>*, .avatar-container span{
+    /*Avatar*/
+    width: 125px; height: 125px;
+}
+
+input[type='file-upload']{opacity:0;}
+.avatar-container>*{position:absolute; }
+
+.btn-upload{z-index:4; ;cursor:pointer; opacity:0; visibility: hidden; transition: .2s ease;}
+
+/*Upload image button*/
+profile-banner .btn-upload::before{            
+    /*Upload image background*/
+    content: "";
+    display: block;
+    position:absolute;
+    top: 0; left:0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient( 135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 10px, rgba(75, 75, 75, .05) 10px, rgba(75, 75, 75, .05) 20px );
+    background-color: rgba(0,0,0,.02);
+}
+
+.avatar-container .btn-upload{padding-top:150px;}
+profile-banner label span{margin-top:150px;opacity:0; transition: opacity .2s ease;}
+profile-banner.edit label span{opacity: 1;}
+.avatar-container span, .banner.container span, #bg-btn-container span{opacity:0; visibility:hidden;}
+.edit label span, .user-profile.edit #bg-btn-container span{opacity:1; visibility:visible;    padding-top: 12px;text-shadow: 0px 2px 2px #000;}
+.avatar-container span, .avatar-container span::before, profile-banner span, profile-banner span::before, #bg-btn-container span, #bg-btn-container span::before{z-index:2; font-family:"Visitor"; font-size: 1.5em;display:block;     text-shadow: #b654f3 0 0 20px; transition:text-shadow .2s ease;}
+.avatar-container:hover span, .avatar-container:hover span::before, profile-banner:hover span, profile-banner:hover span::before, .user-profile.edit #bg-btn-container:hover span, #bg-btn-container:hover span::before{text-shadow: #fff 0 0 20px;}
+.avatar-container span::before, profile-banner span::before, #bg-btn-container span::before{content: "\f093"; font-family:"FontAwesomeS";} /*Upload image icon*/
+.edit label{; z-index:3;text-align:center;}/*Toggled profile edit*/
+.edit .btn-upload{opacity:1; visibility: visible;}
+
+
+/* BACKGROUND INPUT  */
+#bg-btn-container{
+    position:relative;
+    width:300px;
+    margin:auto;
+    opacity:0;
+    visibility:hidden;
+    overflow:hidden;
+    height:0;
+    transition: .2s ease;
+    transition-property:visibility, opacity;
+}
+
+.user-profile.edit #bg-btn-container{visibility:visible;opacity:1; height: 80px;}
+#bg-btn-container .btn-upload {padding-top:80px;}
+#bg-btn-container>*{
+    /*Profile backgronund upload button*/
+    position: absolute;
+    right: 0;
+    width: inherit;
+}   
+
+body header>div>div:last-of-type a{margin: 10px;white-space: nowrap;}
+profile-bar strong{color:#d41d1d;margin-left: 5px;}
+button#edit{cursor:pointer;width: 85.78px;}
+
+/*SAVE FORM*/
+body.edit #edit, .comments article>div>a{    color: #ff3c3c!important;}
+button#save, button#edit{
+    padding: 6px 0;
+    margin: 0 5px;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color:#f90;
+    white-space: nowrap;
+    background-image: linear-gradient(to right, #080808 0%, #1e2023 51%, #232526 100%); background-size: 200% auto;
+    transition: .2s;
+    box-shadow: 1px 3px 10px #000;
+    border: solid #282828 4px;
+    outline: 3px solid black; outline-offset: -3px;
+}
+
+button#save:hover, button#edit:hover{color:#fff!important;background-position: right center;}
+
+body header #save{
+    opacity:0; visibility:hidden; cursor:pointer; width:0;overflow:hidden;}
+body.edit #save{visibility:visible;opacity:1;width:104.55px;}
+
+
+/*/////////////////////////////////// MAINFRAME ////////////////////////////////////////// */
+
+.profile-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding:10px;
+    max-width: 900px!important;
+    background: rgba(0,0,0,0.3);
+    transition: background .2s ease;
+}
+
+/*/////////////////////////////////// SECTIONS ////////////////////////////////////////// */
+
+.profile-container>section{
+    background-color: rgba(15, 15, 15, 0.95);
+    margin:10px 5px; padding:6px; border: solid #282828 4px;
+    outline: 3px solid black;
+    outline-offset: -3px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.47);
+}
+
+.profile-container>section>header{display: flex;justify-content: space-between;    align-items: center;background:none;}
+
+.profile-container>section>header>a{
+    /*grabber*/
+    width: 30px; height: 30px; cursor:move; margin: 0px 6px 12px 0px;
+}
+
+.profile-container>section:not(:nth-of-type(2)):not(:nth-of-type(3)){width:100%;}/*User-generated content container*/
+.profile-container>section:not(:first-of-type):not(:last-of-type){flex:1;}
+
+
+/*/////////////////////////////////// PROFILE GENERIC  ////////////////////////////////////////// */
+
+.profile-forum li>a, .profile-levels li>a{
+    /*Both sections links*/
+    display: flex; justify-content: space-between; flex-wrap:wrap;
+    padding: 10px; margin-bottom: 2px;
+    white-space: nowrap;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.26);
+    transition: .2s; transition-property: background, color;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.profile-forum li:nth-of-type(2n) a, .profile-levels li:nth-of-type(2n) a{background: rgba(255, 255, 255, 0.09);}
+.profile-forum li>a:hover, .profile-levels li>a:hover, .profile-forum li:nth-of-type(2n) a:hover, .profile-levels li:nth-of-type(2n) a:hover{background: rgba(207, 207, 207, 0.37);}
+
+.profile-forum a span{color:#888; font-size: smaller;}
+
+@media only screen and (max-width: 750px){ .profile-container>section:not(:first-of-type):not(:last-of-type){flex:auto;width:100%;}}
+@media only screen and (max-width: 500px){.profile-forum li>a span{width:100%;padding-top:5px;}}
+
+/* ////////////////////////////////// USER CONTENT /////////////////////////////////*/
+
+.user-content .editor{
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+    opacity:0; visibility:hidden;
+    height:0;
+    transition: .2s ease; transition-property: visibility, opacity;
+}
+
+.content-showcase{opacity:1;visibility: visible;}
+.content-showcase, .editor{ background: #0c0a0a;overflow:hidden;}
+.content-showcase audio{width:100%;    display: block;}
+.user-profile.edit .content-showcase{
+    /*Profile content showcase edit mode*/
+    display:none;
+}
+.editor h3, .editor>header{width:100%;}
+.editor textarea{
+    width: 68%;
+    overflow: hidden;
+}
+
+.editor dl{width:30%;white-space: nowrap;}
+.editor dl pre, .editor dl span {display: inline;}
+.editor dd, .editor dt{display:none; font-size:13px; color: #88A;}
+.editor dl>dt{color: #dea037;}
+.user-profile.edit .editor{opacity:1; visibility:visible; height:auto; max-width: 100%;}
+.user-profile.edit .editor textarea {height:208px;     margin: 3px 8px;padding:5px;     line-height: 20px;   color: #e1f4ff;background:#100e17;}
+.user-profile.edit .editor dd, .user-profile.edit .editor dt {display:block;}
+/* ////////////////////////////////// COLOR PICKER /////////////////////////////////*/
+
+.editor h3:not(:first-of-type){padding-top:10px; border-top: 1px solid rgba(255, 255, 255, 0.2);}
+
+.editor>div label{font-family:Jura, Arial, sans-serif; padding: 0 10px;}
+.editor>div{
+    display: flex;    flex-wrap: wrap;justify-content: space-between;margin-bottom:10px;
+    background: repeating-linear-gradient(135deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .05) 10px, rgba(75, 75, 75, .05) 10px, rgba(75, 75, 75, .05) 20px);
+    padding: 5px;
+}
+
+.editor>div input[type="radio"]{
+    position:relative;
+    margin-left:5px;-webkit-appearance:none;width:25px;height:25px;
+    font-size:30px!important; 
+    border: 1px solid #040404; border-radius: 8px;
+    box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+    cursor:pointer;
+    overflow:hidden;
+    transition: box-shadow .2s ease;
+}
+.editor>div input[type="radio"]:hover{box-shadow: #b654f3 0 0 10px;}
+.editor>div input[type="radio"]:checked::after{content:"\f00d"; display:block;  color: rgba(255, 255, 255, 0.95);transform: scale(.5);animation:come .5s ease;height:100%;}
+.editor>div input[type="radio"]:nth-of-type(7):checked::after{color: rgba(6, 6, 6, 0.95);}
+@keyframes come{from {opacity:0;} to {opacity:1;}}
+.editor>div input[type="radio"]:first-of-type{background:#f90;}
+.editor>div:nth-of-type(3) input[type="radio"]:first-of-type, .editor>div:nth-of-type(4) input[type="radio"]:first-of-type{background:#252525;}
+.editor>div input[type="radio"]:nth-of-type(2){background:#56c55f;}
+.editor>div input[type="radio"]:nth-of-type(3){background:#5659c5;}
+.editor>div input[type="radio"]:nth-of-type(4){background:#a743ff;}
+.editor>div input[type="radio"]:nth-of-type(5){background:#c556c5;}
+.editor>div input[type="radio"]:nth-of-type(6){background:#ff4343;}
+.editor>div input[type="radio"]:nth-of-type(7){background:#fff;}
+.editor>div input[type="radio"]::before{
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+}
+.editor>div input[type="radio"]:checked::before {animation: shine 1s;}
+@keyframes shine {100% {left: 125%;}}
+@media screen and (max-width: 840px){.editor>div{width:100%;}}
+@media screen and (max-width: 380px){.editor>div label{width:100%;    margin-bottom: 10px;}}
+
+
+/*/////////////////////////////////// REPORT USER  ////////////////////////////////////////// */
+
+.subsection{
+    /*PM, report, ban section*/
+    position: fixed; left: 50%; top: 50%; 
+    transform: translate(-50%,-50%);
+    width: 490px;   
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    border: solid #282828 4px;
+    outline: 3px solid black; outline-offset: -3px;
+    box-shadow: 0px 2px 8px 0px #000;
+    background-color: rgba(15, 15, 15, 0.95);
+}
+
+.subsection a.exit{margin-right:10px;}
+
+.subsection fieldset{padding: 2px 10px 5px 10px;}
+.subsection textarea{width:98%; height: 200px;}
+.subsection button{float:right; margin-top: 4px;}
+
+/* ///////////////////////////// COMMENTS //////////////////////////*/
+
+.comments{width:100%;}
+.comments img{max-width:100%;}
+.comments article{display:flex; flex-wrap: wrap;margin-bottom: 10px; padding:15px;overflow:hidden;background-color: rgba(11, 9, 11, 0.5); }
+.comments article>header{flex:.45; white-space: nowrap;}
+.comments article>p{flex:1;}
+.comments article>header a:first-of-type>*{ display:inline-block;}  /*User link*/
+.comments article>header a:first-of-type>div>time{display:block; color:#888; font-size:smaller;padding:8px 4px;}  /*Time Posted*/
+.comments article>header img{width: 50px;height: 50px;vertical-align:top;border-radius: 6px;}/*Avatar*/
+.comments .user-online{top: 19px;}
+.comments>ol article>div{padding-left: 10px;}
+
+/*mobile style*/
+@media screen and (max-width: 900px) {
+    html{overflow-x: hidden;}    
+    .comments>ol>li>article{display:block;}    
+    .comments>ol>li>article>p{padding: 15px 0;}
+    body>header form:not(#register-form):not(#login-form){width:100%;}
+}
+
+@media screen and (max-width: 630px) {.content-showcase img{width:100%;}}
+
+
+/*//////////////////////////// PROFILE FRIENDS  /////////////////////////////////*/
+
+.profile-friends li{display:inline-block; margin: 4px;}
+.profile-friends img, .profile-friends a{width:50px; height:50px;border-radius:6px;}
+.profile-friends a{position:relative;display:block;}
+.profile-friends span{opacity:0; visibility:hidden;    background-color: rgba(0, 0, 0, 0.75);padding: 4px 8px;border-radius: 5px; transition: .2s ease;position:absolute;left:0;  bottom:-12px;  z-index: 3000;}
+.profile-friends li:hover span{opacity:1; visibility:visible;}
+.profile-friends .user-online{ top: -11px; left: 40px;}
+
+
+/*////////////////// USER INFO /////////////////*/
+
+/*Toggler*/
+profile-bar>div>div:first-of-type>div:last-of-type{flex:1;text-align:right;}/*button container*/
+#info-toggler{    width: 30px;background:0;transform: rotate(0deg);transition: .2s linear; transition-property: transform, text-shadow;}
+#info-toggler:hover{ text-shadow: 0 0 10px rgba(255,255,255,1);}
+#info-toggler.toggled{transform: rotate(180deg); }
+
+#info-toggler::after{
+    content: "\f0dd";
+    font-family: "FontAwesomeS";
+    color: #fff;
+    font-size: 2em;
+    line-height: 0;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(241,241,241,1) 50%,rgba(225,225,225,1) 51%,rgba(246,246,246,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+user-info{justify-content:space-around; flex-wrap:wrap;
+    position:relative;
+    transition:  .5s ease;
+    background:#000;
+    z-index: 1;
+    box-shadow: 0px 2px 12px 4px rgba(0, 0, 0, 0.47);
+    background: linear-gradient(to top,rgba(0, 0, 0, 0.56),#000000);
+}
+
+user-info, user-info[mode="close"]{height: 0;overflow: hidden;}
+user-info[mode="open"]{height: 220px; padding-top:20px;}
+
+
+/*//////////////////////////// USER SOCIAL /////////////////////////////////*/
+
+user-info>ul{
+    min-width:200px;
+    font-family: "Visitor", "Iceland", Arial, sans-serif;
+}
+
+.user-social input{
+    /*URL input*/
+    display:none;
+    opacity:0;
+    visibility:hidden;
+    transition: .2s ease;
+    margin-top: 2px;
+    padding: 7px;
+    text-indent: 2px;
+    background: rgba(0,0,0,0.3);
+    line-height: 16px; font-size: 14px;
+    color: #fff;
+    width:100%;
+}
+
+.user-social span{color:#888;}
+.user-profile.edit .user-social input{opacity:1; visibility:visible; display:inline;}
+
+.user-profile.edit .user-social a, .user-profile.edit .user-social span{display:none;}
+
+.user-social a, .user-social span, user-info ul:first-of-type li{
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 2px;
+    padding: 7px;
+    text-indent: 2px;
+    background: rgba(0,0,0,0.3);
+}
+user-info ul:first-of-type li{display:flex; justify-content: space-between; }/*User info*/
+user-info b{font-weight:400; color: var(--color-high);}
+
+.profile-container h3{padding-bottom:10px;}
+.editor h3{padding:10px 0;}
+.user-discord{color: #888;}

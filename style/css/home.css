@@ -1,0 +1,46 @@
+.community{background-image:url(//dashmash.ddns.net/assets/img/bg/wall_logo.jpg);}
+.community h2::before, .community h2::after{background: #825411!important;}
+.community section{box-shadow: inset 0 1px 0 0 #3e3e3e, inset -3px -2px 20px -7px #404040, inset 0 0 0 1px #313131, inset 0 -3px 5px 0 #1b1b1b;border: solid 10px;border-image: url(//dashmash.ddns.net/assets/img/bg/border.png) 20 round;       background: #1f1a26;}
+.discord{width:37%;}
+section.forumac{border-color:#4e4e4e;width:60%;}
+.forumac *{white-space: nowrap;}
+.forumac ol{padding: 5px 10px;}
+.forumac ol li{font-family: Jura, Arial, sans-serif; margin-bottom:2px;overflow:hidden;display:flex;justify-content:space-between; background: url(//dashmash.ddns.net/assets/img/bg/breaker.jpg) top center no-repeat #0b0c0e; background-size: 100% 18px;}
+.forumac ol li>div{height:50px;line-height:1.5em;padding:5px;border: 1px solid rgba(255, 255, 255, 0.07);}
+.forumac ol li>div:first-of-type{width:75%;align-items:center;color:#fff; background-color: rgba(255, 255, 255, 0.03); margin-right: 3px;}
+.forumac ol li>div:last-of-type{width:35%;text-align:right; background-color: rgba(255, 0, 250, 0.07); }
+.forumac ol li>div:first-of-type>a{color:#c16c11;}
+.forumac ol li>div:first-of-type>a:visited{color:#7d4615;}
+.forumac ol li>div:last-of-type time{display:block;color:#999;}
+.forumac ol li small{display:block;}
+.forumac ol li>div:first-of-type>a{font-weight:bold;overflow:hidden; }
+.forumac ol li>div:first-of-type>a:hover{text-decoration:underline;color:#c16c11!important;}
+.forumac ol li>div:last-of-type a{margin-left:8px;}
+.news>div{align-items:center;}
+.news{background-image:url("//dashmash.ddns.net/assets/img/bg/wall_blanker_red.jpg");}
+.news article>header{min-height:25px;}
+.news article video{width:100%;max-height:300px;}
+.news article h3, .news article p{padding:3px;}
+.news article p{padding:10px;background:rgba(255, 255, 255, 0.7);height:250px;clip-path: polygon(0% 0, 131% 0, 71% 176%, 0 100%);overflow:hidden;}
+.news article h3{line-height:35px;font-size:1.8em;border-bottom:solid rgba(128, 128, 128, 0.25) 1px;text-indent:14px;margin-top:3px;}
+.news article>header>span{position:relative;top:3px;line-height:25px;margin-left:12px; white-space: nowrap;}
+.news article>header img, .news ol img{width:35px;height:35px;float:left;margin-left:10px;border-radius:20px;}
+.news a span{display:inline-block;}
+.news p img{max-height:193px;}
+.news strong{font-size:inherit;}
+.news em{display:block;font-size:12px;font-style:normal;white-space:nowrap;}
+.news span{font-size:12px;}
+.news ol{width:35%;}
+.news ol>li>a{display:block;margin-bottom:2px;text-indent:13px;height:58px;padding-top:10px;white-space:nowrap;transition:.13s ease-in-out;    transition-property: color, background;background:rgba(14, 11, 12, 0.97);clip-path: polygon(0% 0, 115% 0, 97% 100%, 0 100%);-webkit-mask-image:-webkit-linear-gradient(-15deg, rgba(255, 255, 255, 0.7) 0%, #fff 40%, #fff 50%, rgba(255, 255, 255, 0.93) 60%, #fff 81%, rgba(255, 255, 255, 0.8) 100%); }
+.news ol>li>a:hover{background-color:#312034;}
+.news article{width:60%;min-height:340px; color:#000;}
+.news article>header{background:rgba(15, 11, 12, 0.92);padding:10px;box-shadow:1px 2px 5px 0px rgba(0, 0, 0, 0.47);}
+.news article>header img, .news article>header h2{display:inline-block;}
+.news article header a{float:right;margin-top:4px;}
+
+
+@media only screen and (max-width:900px){.community>div, .news>div{padding: 20px 0!important;}}
+.community>div, .news>div{padding:40px;display:flex;flex-wrap:wrap;justify-content:space-between;}
+.community>div>div:first-of-type{margin-right:20px;}
+
+@media only screen and (max-width:400px){.forumac ol li{display:block;} .forumac ol li>div{width:100%!important;}.forumac ol li>div:last-of-type time{margin-left:5px;display:inline;}.forumac ol li>div:last-of-type{height:auto;    border-top: 0;}.news article header a{float:none;}}

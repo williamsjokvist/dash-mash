@@ -1,0 +1,4 @@
+body[data-loading]{
+    filter: brightness(0%);
+    visibility:hidden;
+}

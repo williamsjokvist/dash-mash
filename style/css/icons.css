@@ -1,0 +1,37 @@
+.play h2::before{background:url("//dashmash.ddns.net/assets/img/icons/d-pad.svg");}
+chat-window h3::before{background:url("//dashmash.ddns.net/assets/img/icons/chat.svg");}
+.featlv h3::before{background:url("//dashmash.ddns.net/assets/img/icons/star.svg");}
+.forumac h3::before{background:url("//dashmash.ddns.net/assets/img/icons/ladder.svg");}
+section.discord h3::before{font:400 24px/0 "FontAwesomeB";content:"\f392";line-height:30px;background:-webkit-linear-gradient(top, #ffde00 0%,#ff8400 100%);-webkit-background-clip:text;}
+.profile-levels h3::before{background:url("//dashmash.ddns.net/assets/img/icons/span.svg");}
+.profile-forum h3::before{background:url("//dashmash.ddns.net/assets/img/icons/stronglass.svg");}
+.forum h2::before{background:url("//dashmash.ddns.net/assets/img/icons/scroll.svg");}
+.forum h3:first-of-type::before{background:url("//dashmash.ddns.net/assets/img/icons/goggles.svg");}
+.forum h3:last-of-type::before{background:url("//dashmash.ddns.net/assets/img/icons/chainz.svg");}
+.forum h3::before{background:url("//dashmash.ddns.net/assets/img/icons/chainz.svg");}
+.editor h3::before{background:url("//dashmash.ddns.net/assets/img/icons/tweak.svg");}
+.editor h3:last-of-type::before{background:url("//dashmash.ddns.net/assets/img/icons/palette.svg");}
+.comments h3::before{background:url("//dashmash.ddns.net/assets/img/icons/chat.svg");}
+.notifications h3::before{background:url("//dashmash.ddns.net/assets/img/icons/robe.svg");}
+.notifications li[data-pm]::before, .subsection.pm h4::before{background:url("//dashmash.ddns.net/assets/img/icons/letter.svg");}
+.notifications li[data-fr]::before{font:400 22px/0 "FontAwesomeS"; content:'\f234'; line-height:30px;background:-webkit-linear-gradient(top, #ffde00 0%,#ff8400 100%);-webkit-background-clip:text;-webkit-text-fill-color: transparent; }
+.notifications .report::before{background:url("//dashmash.ddns.net/assets/img/icons/exclamation.svg");}
+.about article:first-of-type h3::before{background:url("//dashmash.ddns.net/assets/img/icons/excalibur.svg");}
+.about article:nth-of-type(2) h3::before{background:url("//dashmash.ddns.net/assets/img/icons/robe.svg");}
+.about article:nth-of-type(3) h3::before{background:url("//dashmash.ddns.net/assets/img/icons/binoculars.svg");}
+.ldrboards h2::before{background:url("//dashmash.ddns.net/assets/img/icons/trophy.svg");}
+.ldrboards section:first-of-type h4::before{background:url("//dashmash.ddns.net/assets/img/icons/best.svg");}
+#register-form h3::before{background:url("//dashmash.ddns.net/assets/img/icons/quill.svg");}
+.report-user h4::before{background:url("//dashmash.ddns.net/assets/img/icons/binoculars.svg");}
+.subsection h4::before{background:url("//dashmash.ddns.net/assets/img/icons/chainz.svg");}
+.play dl:first-of-type dt::before{background:url("//dashmash.ddns.net/assets/img/icons/keyboard.svg");}
+.play dl:last-of-type dt::before{background:url("//dashmash.ddns.net/assets/img/icons/pad.svg");}
+.download h3::before{background:url("//dashmash.ddns.net/assets/img/icons/mirror.svg");}
+.error h1::before{background:url("//dashmash.ddns.net/assets/img/icons/puzzle.svg");height:60px;width:60px;}
+a.exit::before{content:"\f00d";}
+.friends h3::before, .profile-friends h3::before{background:url("//dashmash.ddns.net/assets/img/icons/lan.svg");}
+.settings h3::before{background:url("//dashmash.ddns.net/assets/img/icons/cog.svg");}
+.user-menu>header>h4::before{background:url("//dashmash.ddns.net/assets/img/icons/menu.svg")}
+.notifications>header>h4::before{background:url("//dashmash.ddns.net/assets/img/icons/alert.svg")}
+
+.profile-container>section>header>a{background:url("//dashmash.ddns.net/assets/img/icons/grenade.svg");    transform: rotate(90deg);}

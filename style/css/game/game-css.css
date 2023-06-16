@@ -1,0 +1,154 @@
+html{height:100%;overflow:hidden;}
+
+*{margin:0;padding:0;border:0;outline:0;}
+
+*:focus{
+    outline:transparent;
+}
+
+body{
+    background-color: #040404;
+    color:#fff;
+}
+
+canvas{touch-action: none; transition:all .3s;}
+
+progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    height: 45px; width: 600px;
+    background-color: rgba(247, 206, 59, 0.5)!important;
+    border: 5px solid rgba(247, 206, 59, 0.2);
+    border-radius:4px;
+}
+
+progress[value]{
+    transition: .4s ease;
+}
+
+::-webkit-progress-bar{
+    background-color: #714800!important;
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    animation: progress-bar-stripes 3s linear infinite;
+}
+
+progress{
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    animation: progress-bar-stripes 3s linear infinite;
+}
+
+::-webkit-progress-value{
+    background-color: #ffcc36!important;
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    animation: progress-bar-stripes 3s linear infinite;
+    box-shadow: 0px 0px 15px 1px rgba(255, 189, 40, 0.3);
+    border-radius:2px;
+}
+
+::-moz-progress-bar{
+    background-color: #ffcc36!important;
+    background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+    animation: progress-bar-stripes 3s linear infinite;
+    box-shadow: 0px 0px 15px 1px rgba(255, 189, 40, 0.3);
+    border-radius:2px;
+}
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 0;
+    }
+}
+@-moz-keyframes progress-bar-stripes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 0;
+    }
+}
+
+@-ms-keyframes progress-bar-stripes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 0;
+    }
+}
+
+@-o-keyframes progress-bar-stripes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 0;
+    }
+}
+
+/*/////////////////////////////// DIALOG ////////////////////////////// */
+
+.greet{
+    display:block;
+    position:absolute;
+    padding:20px;
+    top: 50px;
+    background:rgba(0,0,0,0.75);
+    color: #fff;
+    font: 400 16px "Muli", Arial, sans-serif;
+    z-index:255;
+    margin: auto;
+    transition: opacity 2s ease-in-out;
+    opacity:0;
+}
+
+.greet[open]{
+    opacity:1;
+}
+
+/*/////////////////////////////// SCANLINES ////////////////////////////// */
+.scanlines {
+    overflow: hidden;
+}
+
+.scanlines:before, .scanlines:after {
+    display: block;
+    pointer-events: none;
+    content: '';
+    position: absolute;
+}
+
+.scanlines:before {
+    width: 100%;
+    height: 2px;
+    z-index: 2147483646;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0.75;
+    animation: scanline 6s linear infinite;
+}
+.scanlines:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483647;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+    background-size: 100% 4px;
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+@keyframes scanline {
+    0% {
+        transform: translate3d(0, 200000%, 0);
+    }
+}

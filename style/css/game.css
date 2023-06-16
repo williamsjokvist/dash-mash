@@ -1,0 +1,341 @@
+/* //////////////////////////////////////////////////////// PLAY ///////////////////////////////////////////////////////////// */
+
+.play>header{
+    border: solid #282828 4px;
+    outline: 3px solid #000;
+    outline-offset: -3px;
+    background-image: url(//dashmash.ddns.net/assets/img/bg/wall_logo_rad_4.jpg);
+    -webkit-mask-image: -webkit-linear-gradient(90deg, rgba(45, 45, 45, 0.98) 0%, #fffffff2 40%, #000000f2 50%, rgba(255, 255, 255, 0.93) 60%, rgba(255, 255, 255, 0.91) 81%, rgb(255, 255, 255) 100%);
+}
+
+.play>header p{padding:20px;background:rgba(0,0,0,0.8)}
+
+main>header h2{
+    text-align: right;
+    width: 20%;
+    margin-left: -3%;
+}
+
+main>header>div{margin:auto; padding-bottom:20px;}
+
+
+body{
+    background-image: url(//dashmash.ddns.net/assets/img/bg/wall_game.jpg);
+    background-size:cover; background-attachment:fixed;
+}
+
+.play>section{
+    z-index: 2147483624;
+    border: solid black; border-width: 0 4px;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 0.68);
+    transition: max-width .5s ease;
+    max-width:1300px;margin:auto;
+}
+
+.play>section:first-of-type{background: url(//dashmash.ddns.net/assets/img/bg/wall_line_small.jpg) repeat center #000; padding: 20px;}
+
+.play>section:first-of-type iframe{
+    flex:1;
+    min-height: 510px;
+    height:100%;
+    overflow: hidden;
+}
+
+.play>section:first-of-type>div{
+    display:flex;flex-wrap: wrap;
+    border: solid #282828 4px;
+    outline: 3px solid #000;
+    outline-offset: -3px;
+    box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.47);
+    padding: 4px;
+    background: #111;
+}
+
+.play>section:first-of-type>div, .play section details, control-panel{
+    position:relative;    z-index: 2147483627;}.hamburger-menu.nav-open{z-index: 2147483628;}
+
+/*FULLSCREEN*/
+html.fullscreen{
+    overflow:hidden;
+}
+
+html.fullscreen nav, html.fullscreen .play>section:nth-of-type(2)>div{
+    display:none;
+}
+
+html.fullscreen iframe{
+    width: 100vw!important;
+    height: 100vh!important;
+    top: 0;
+    left: 0;
+    z-index: 2147483647;
+    position: fixed;
+}
+
+@media only screen and (max-width: 900px){
+    .play>section:first-of-type iframe{width: 100%!important;}
+    .play>header>div{max-width:1200px;}
+}
+
+.moody{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: .5s ease;
+    transition-property: background, visibility;
+    z-index: 2147483625;
+    visibility:hidden;
+    will-change: visibility;
+}
+
+.moody.on{
+    background: rgba(0,0,0,0.9);
+    visibility:visible;
+}
+
+/* //////////////////////////////////////////////////////// CHAT ///////////////////////////////////////////////////////////// */
+
+chat-window{
+    /*Chat Window*/
+    width:25%;
+    background: linear-gradient(to bottom,#030303,#040b25), #000;
+    padding: 10px;
+    border-left: 5px solid #030303;
+}
+
+@media only screen and (max-width: 1150px){
+    chat-window, .play>section:first-of-type iframe{width:100%; max-width:100%;}
+}
+
+
+chat-window>ol{
+    /*Chat List*/
+    padding-top: 3px;
+    height: 375px;
+    overflow-x: hidden;
+    text-align: left;
+    background: linear-gradient(to bottom,#030303,#040b25), #000;
+}
+
+chat-window>ol>li{
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 5px; margin: 10px;
+    border-radius: 10px;
+}
+
+chat-window>ol>li time{
+    /*Post timestamp*/
+    color: #787878;
+    font-size: 11px;
+    float:right;
+}
+
+chat-window>ol>li img{
+    /*Avatar*/
+    width: 23px;
+    height: 23px;
+    border-radius: 15px;
+    display: inline;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+chat-window>ol>li p{
+    /*Chat msg*/
+    color: #FFF;
+    width: 100%;
+    word-wrap: break-word;
+    padding: 8px 10px;
+}
+
+chat-window footer{
+    display: flex; justify-content: center;
+    padding-top: 13px;
+    min-height: 81px;
+    border-top: 1px solid rgba(128, 128, 128, 0.22);
+    -webkit-mask-image: -webkit-linear-gradient(86deg, rgba(255, 255, 255, 0.55) 0%, #fffffff2 40%, rgba(255, 255, 255, 0.9490196078431372) 50%, rgba(255, 255, 255, 0.93) 60%, rgba(255, 255, 255, 0.91) 81%, rgba(255, 255, 255, 0.91) 100%);
+}
+
+chat-window textarea{
+    /*Write chat*/
+    width: 73%;
+    height: 50px;
+    color: #000;     background-color: #c1c1c1;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+}
+
+chat-window footer button{
+    border-radius: 20px;
+    width: 30px; height: 30px;    
+    margin: 10px 0 0 20px;
+    cursor: pointer;
+    transition: .2s ease;
+    padding:0;
+}
+
+chat-window footer button:hover{
+    background: #f90;
+    color: #272525;
+}
+
+chat-window footer button::after{
+    content:"\f3fe";
+    vertical-align: middle;
+}
+
+chat-window>footer>p{
+    /*You need to login msg*/
+    margin-top: 20px;
+    text-align: center;
+}
+/* //////////////////////////////////////////////////////// DETAILS (CONTROLS & SETTINGS ) ///////////////////////////////////////////////////////////// */
+
+.play>section:nth-of-type(2){
+    /*Details wrapper*/
+    background: url(//dashmash.ddns.net/assets/img/bg/breaker.jpg) top no-repeat, #030303;
+    padding: 40px 15px;
+
+    background-size: 100% 16px;
+}
+
+.play section details, control-panel{max-width:1200px; margin:auto;}
+
+.play details{
+    /*Details*/
+    transition: height 1s ease;
+    margin-top: 20px;
+}
+
+control-panel{
+    height: 36px;    
+    display:block;
+}
+
+.play details summary{
+    font-size: 20px;
+    cursor: default;
+    user-select: none;
+}
+
+.play details>*{
+    display:block;
+}
+
+/*Expanded*/
+.play>section:first-of-type.expanded, .play>section:nth-of-type(2).expanded{max-width: 100%;}
+.play>section:first-of-type.expanded{height:720px;}
+.play>section:first-of-type.expanded>div{height:100%;    max-width: 1620px;margin: auto;}
+.play>section:first-of-type.expanded chat-window>ol{height:525px;}
+
+.play section:last-of-type button{
+    display: inline-block;
+    float: left;
+    padding: 0 7px;
+    height: 36px;
+    line-height: 36px;
+    user-select: none;
+    font-size: .95rem;
+
+    color: #9a9a9a;
+    cursor: pointer;
+    background:none;
+    transition: all .1s ease-in-out 0s;
+}
+
+.play section:last-of-type button:hover{ color: #7431bf;}
+.play section:last-of-type button::before{margin-right:5px;}
+.play section:last-of-type button:nth-of-type(1)::before{content: "\f065";}     /*Expand*/
+.play section:last-of-type button:nth-of-type(2)::before{content: "\f35d";}     /*External*/
+.play section:last-of-type button:nth-of-type(3)::before{content: "\f0eb";}     /*Lights*/
+.play section:last-of-type button:nth-of-type(4)::before{content: "\f028";}     /*Sound*/
+.play section:last-of-type button:nth-of-type(1).toggled::before{content: "\f066";}    /*Minimize*/
+.play section:last-of-type button:nth-of-type(4).toggled::before{content: "\f026";} /*Mute*/
+
+/*Animations*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes growText {
+    0% {
+        font-size: 0;
+        opacity: 0;
+    }
+    100% {
+        font-size: 1em;
+        opacity: 0;
+    }
+}
+
+details:not([open]) { height: 1.25em; }
+details[open] { height: 14em; }
+
+details[open]>*:not(summary){
+    /*Content anim*/
+    animation-name: growText, fadeIn;
+    animation-duration: 500ms, 200ms;
+    animation-delay: 0ms, 500ms;
+}
+
+.play dl kbd{
+    /*Keyboard controls*/
+    margin: 0 .1em;
+    padding: .1em .6em;
+    font-size: 13px;
+    line-height: 1.4;
+    border: 2px solid #ae8e3d;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.play dl:nth-of-type(2) dd:not(:first-of-type) kbd{
+    /*XInput controls*/
+    border-radius: 40px;
+}
+
+.play dl:nth-of-type(2) dd kbd{
+    border-color: #888;
+}
+
+
+.play dl dd{
+    /*Controls list item*/
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.play dl dd span{
+    /*Control name*/
+    width: 100px;
+    padding-left: 25px;
+}
+
+.play dl{
+    /*list*/
+    display:inline-block;
+    vertical-align:top;
+}
+
+.play dl:not(:first-of-type){
+    padding-left: 40px;
+    margin-left: 20px;
+    border-left: 1px solid #808080;
+}
+
+.play dt{
+    /*List title*/
+    text-indent:0;     margin: 10px 0;
+}
+
+@media only screen and (max-width: 900px){
+    .play dl:not(:first-of-type){margin-left:0;padding-left:0; border-left:0;}
+    .play details[open]:nth-of-type(2){height:24em;}
+}
